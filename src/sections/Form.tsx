@@ -98,7 +98,13 @@ export default function Form() {
 
     return (
         <Box sx={{ width: "100%" }}>
-            <Stepper activeStep={activeStep}>
+            <Stepper
+                activeStep={activeStep}
+                sx={{
+                    flexDirection: { xs: "column", md: "unset" },
+                    alignItems: { xs: "start", md: "center" },
+                }}
+            >
                 {steps.map((label, index) => {
                     const stepProps: { completed?: boolean } = {};
                     const labelProps: {
